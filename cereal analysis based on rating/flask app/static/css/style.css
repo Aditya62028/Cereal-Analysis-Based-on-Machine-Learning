@@ -1,0 +1,28 @@
+body
+{
+background-image:url('a.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+height:100%;
+text-align:center;
+}
+h1
+{
+ color:purple;
+}
+input,button {  
+	margin-bottom: 10px; 
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: purple;
+	text-shadow: 1px 1px 1px rgba(255,182,193,0.5);
+	border: 1px solid rgba(128,0,128,0.4);
+	border-radius: 4px;
+}
+p{
+    color:purple;
+    font-size:25px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Cereal Analysis Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+.login{
+top: 20%;
+}
+select {
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: purple;
+    text-shadow: 1px 1px 1px rgb(255 182 193 / 50%);
+    border: 1px solid rgba(128,0,128,0.4);
+    border-radius: 4px;
+}
+</style>
+</head>
+
+<body>
+ <div class="login">
+ 
+	<h1>Cereal Analysis Prediction</h1>
+    <br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="/predict"method="post">
+        <select name="mfr">
+            <option disabled="disabled" selected="selected">Manufacturer</option><br>
+            <option value="a">A</option>
+    		<option value="g">G</option>
+    		<option value="k">K</option>
+    		<option value="n">N</option>
+    		<option value="p">P</option>            
+    		<option value="q">Q</option>
+    		<option value="r">R</option>
+        </select>
+        <select name="type">
+            <option disabled="disabled" selected="selected">Type</option>
+            <option value="c">Cold</option>
+    		<option value="h">Hot</option>
+        </select><br>
+    	<input type="text" name="Calories" placeholder="Calories" required="required" /><br>
+        <input type="text" name="Protien" placeholder="Protien" required="required" /><br>
+		<input type="text" name="Fat" placeholder="Fat" required="required" /><br>
+        <input type="text" name="Sodium" placeholder="Sodium" required="required" /><br>
+        <input type="text" name="Fiber" placeholder="Fiber" required="required" /><br>
+        <input type="text" name="Carbo" placeholder="Carbo" required="required" /><br>
+        <input type="text" name="Sugars" placeholder="Sugars" required="required" /><br>
+        <input type="text" name="Potass" placeholder="Potass" required="required" /><br>
+        <input type="text" name="Vitamins" placeholder="Vitamins" required="required" /><br>
+        <input type="text" name="Shelf" placeholder="Shelf" required="required" /><br>
+        <input type="text" name="Weight" placeholder="Weight" required="required" /><br>
+        <input type="text" name="Cups" placeholder="Cups" required="required" /><br>
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    
+    </form>
+
+   <br>
+   <br>
+   <p>
+   {{ z }}
+    <p>
+ </div>
+
+
+</body>
+</html>
+
